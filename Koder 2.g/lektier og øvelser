@@ -1,0 +1,29 @@
+import math
+
+def rektangle_area():
+    længde = int(input("Indtast længde: "))
+    bredde = int(input("Indstast bredde: "))
+    areal_1 = længde * bredde
+    print ("Arealet er", areal_1)
+
+def cirkel_area():
+    radius = float(input("Indast radiusen: "))
+    areal_2 = math.pi * radius ** 2
+    print ("Arealet af denne cirkel er", areal_2)
+
+def trekant_area():
+    ivan = int(input("Indtast højde: "))
+    remi = int(input("Indtast grundlinje: "))
+    areal_3 = 0.5 * ivan * remi
+    print ("Arealet af din mor er", areal_3)
+
+while True:
+    choice = input("Vil du beregne arealet af en cirkel, rektangel eller en trekant?: ")
+    if choice == "rektangel":
+        rektangle_area()
+    elif choice == "trekant":
+        trekant_area()
+    elif choice == "cirkel":
+        cirkel_area()
+    else:
+        print("Det var der ikke en af mulighederne!")
