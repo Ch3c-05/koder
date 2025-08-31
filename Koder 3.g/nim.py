@@ -17,7 +17,7 @@ def computer():
         bricks = 1 
     print("CPU takes some", bricks)
     bricks_alt -= bricks
-    #print("Der er", bricks_alt, "brikker tilbage.")
+    print("Der er", bricks_alt, "brikker tilbage.")
     
 def p1():
         
