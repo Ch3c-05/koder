@@ -11,30 +11,27 @@ def vis_brikker():
     print("Brikkerne tilbage:", bricks_emoji * bricks_alt)
 
 
-def computer():
+def p2():
     
-    global bricks, bricks_alt
+    global player2, bricks_alt
     vis_brikker()
-
-    #Den stykke kode er faktisk algoritmen som man bruger for at vinder spillet.
-
-    #print("Der er", bricks_alt, "brikker tilbage.")
-    #if bricks_alt % 4 == 3:
-     #   bricks = 2
-    #elif bricks_alt % 4 == 2:
-    #    bricks = 1
-    #elif bricks_alt % 4 == 0:
-    #    bricks = 3
-    #else:
-     #   bricks = 1 
-    #print("CPU takes some", bricks)
-    #bricks_alt -= bricks
-    #print("Der er", bricks_alt, "brikker tilbage.")
-    
     print("Der er nu", bricks_alt, "brikker tilbage.")
-    bricks = random.randint(1, min(3, bricks_alt))
-    print("CPU tager", bricks, "brikker")
-    bricks_alt -= bricks
+    
+    while True:
+        try:
+            player2 = int(input("Hvor mange vil du fjerne?: "))
+            if player2 < 1 or player2 > 3:
+                print("Du kan kun fjerne 1, 2 eller 3 brikker.")
+            elif player2 > bricks_alt:
+                print("Der er ikke nok brikker tilbage.")
+            else:
+                print("Player2 tager", player2, "brikker.")
+                bricks_alt -= player2
+                break
+        except ValueError:  
+            print("Indtast et gyldigt tal.")
+
+   
 
 
 
@@ -52,7 +49,7 @@ def p1():
             elif player > bricks_alt:
                 print("Der er ikke nok brikker tilbage.")
             else:
-                print("Du tager", player, "brikker.")
+                print("Player1 tager", player, "brikker.")
                 bricks_alt -= player
                 break
         except ValueError:  
@@ -72,7 +69,7 @@ def game_loop():
         if bricks_alt == 0:
             print("CPU har tabt!")
             break
-        computer()
+        p2()
 
 
 
