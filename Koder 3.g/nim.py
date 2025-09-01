@@ -37,7 +37,6 @@ def computer():
     bricks_alt -= bricks
 
 
-
 def p1():
         
     global player, bricks_alt
