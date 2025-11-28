@@ -1,5 +1,3 @@
-import random
-
 bricks_emoji = "🧱"
 bricks_alt = 21
 bricks = 0
