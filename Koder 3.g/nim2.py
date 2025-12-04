@@ -60,15 +60,28 @@ def game_loop():
     
     while True:
         if bricks_alt == 0:
-            print("Du har tabt!")
+            print("Player1 har tabt!")
             break
         p1()
 
         if bricks_alt == 0:
-            print("CPU har tabt!")
+            print("Player2 har tabt!")
             break
         p2()
 
+    #Den stykke kode er faktisk algoritmen som man bruger for at vinder spillet.
 
+    #print("Der er", bricks_alt, "brikker tilbage.")
+    #if bricks_alt % 4 == 3:
+     #   bricks = 2
+    #elif bricks_alt % 4 == 2:
+    #    bricks = 1
+    #elif bricks_alt % 4 == 0:
+    #    bricks = 3
+    #else:
+     #   bricks = 1 
+    #print("CPU takes some", bricks)
+    #bricks_alt -= bricks
+    #print("Der er", bricks_alt, "brikker tilbage.")
 
 game_loop()
